@@ -261,7 +261,7 @@ def sell():
             db.execute("DELETE FROM portfolio WHERE id=:id AND symbol=:symbol", id=session["user_id"], symbol=stock["symbol"])
         # Else update the shares count
         else:
-            db.execute("UPDATE portfolio SET shares=:shares WHERE id=:id AND symbol=:symbol", shares=shares_total, id=session["user_id"], symbol=stock["symbol"])
+            db.execute("UPDATE portfolio SET shares=:shares WHERE id=:id AND symbol=:symbol", shares=sharesTotal, id=session["user_id"], symbol=stock["symbol"])
 
         # Return to index
         return redirect(url_for("index"))
