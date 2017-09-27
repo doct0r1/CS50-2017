@@ -240,7 +240,7 @@ def sell():
             return apology("Shares must be positive number.")
 
         # select the symbol shares of that user
-        userShares = db.execute("SELECT shares FROM portfolio WHERE id=:id AND symbol=:symbol", id=session["user_id"], symbol=stock["symbol"])
+        userShares = db.execute("INSERT INTO users (username, hash) VALUES(:username, :hash)", username=request.form.get("username"), hash=pwd_context.encrypt(request.form.get("password")))
 
         # Check if enough shares to sell
         if not userShares or int(userShares[0]["shares"]) < shares:
