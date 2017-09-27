@@ -30,6 +30,7 @@ Session(app)
 # configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
+
 @app.route("/")
 @login_required
 def index():
@@ -302,4 +303,3 @@ def loan():
     # From GET
     else:
         return render_template("loan.html")
-    
