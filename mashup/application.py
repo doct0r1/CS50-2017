@@ -48,6 +48,7 @@ def articles():
     if articles:
         for i in len(articles):
             return articles[i]
+            i = i + 1
     else:
         return jsonify(articles)
 
@@ -66,6 +67,7 @@ def search():
     if len(places):
         for i in len(places):
             return jsonify([places[i]])
+            i += 1
     else:
         return jsonify(places)
 
