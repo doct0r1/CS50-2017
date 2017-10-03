@@ -71,11 +71,11 @@ function addMarker(place)
 
     // instantiate marker
     var marker = new google.maps.Marker ({
-        position = myLatLng,
+        position: myLatLng,
         map: map,
         title: place["place_name"] + ", " + place["admin_name1"],
         label: place["place_name"] + ", " + place["admin_name1"],
-        icon: image
+        icon: icon
     });
 
     // get articles for places
