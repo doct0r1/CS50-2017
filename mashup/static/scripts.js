@@ -67,7 +67,7 @@ function addMarker(place)
     var myLatLng = new google.maps.LatLng(place["latitude"], place["longitude"]);
 
     // declare icon for marker
-    var icon = "symbol_blank.png";
+    var icon = "../static/symbol_blank.png";
 
     // instantiate marker
     var marker = new google.maps.Marker ({
